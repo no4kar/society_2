@@ -1,0 +1,20 @@
+﻿  func_def.cpp
+d:\2\my projects\society_2\society_2\func_def.cpp(14): warning C4018: <: несоответствие типов со знаком и без знака
+d:\2\my projects\society_2\society_2\func_def.cpp(18): warning C4018: <: несоответствие типов со знаком и без знака
+d:\2\my projects\society_2\society_2\func_def.cpp(59): warning C4018: <: несоответствие типов со знаком и без знака
+d:\2\my projects\society_2\society_2\func_def.cpp(70): warning C4018: >: несоответствие типов со знаком и без знака
+d:\2\my projects\society_2\society_2\func_def.cpp(73): warning C4018: >: несоответствие типов со знаком и без знака
+  main.cpp
+d:\2\my projects\society_2\society_2\main.cpp(25): warning C4018: >: несоответствие типов со знаком и без знака
+  Rel_class_def.cpp
+  save_load.cpp
+d:\2\my projects\society_2\society_2\save_load.cpp(33): warning C4018: <: несоответствие типов со знаком и без знака
+d:\2\my projects\society_2\society_2\save_load.cpp(41): warning C4018: <: несоответствие типов со знаком и без знака
+d:\2\my projects\society_2\society_2\save_load.cpp(54): warning C4018: <: несоответствие типов со знаком и без знака
+d:\2\my projects\society_2\society_2\save_load.cpp(81): warning C4018: <: несоответствие типов со знаком и без знака
+d:\2\my projects\society_2\society_2\save_load.cpp(91): warning C4018: <: несоответствие типов со знаком и без знака
+  Trans_class_def.cpp
+  Создание кода...
+  .NETFramework,Version=v4.6.1.AssemblyAttributes.cpp
+  func_def.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  Society_2.vcxproj -> D:\2\my projects\Society_2\Debug\Society_2.exe
