@@ -25,24 +25,12 @@ enum options {
 
 class Human {
 public:
-	Human() :name("no_data"), sex("no_data"), age(0) {}
+	Human();// : name("no_data"), sex("no_data"), age(0) {}
+	~Human(); //{}
 
-	~Human() {}
-
-	Human(const Human & other) {
-		this->name = other.name;
-		this->sex = other.sex;
-		this->age = other.age;
-	}
-
-	virtual void set_info() {
-		std::cout << "\tName\t";
-		std::cin >> name;
-		std::cout << "\tSex\t";
-		std::cin >> sex;
-		std::cout << "\tAge\t";
-		std::cin >> age;
-	}
+	Human(const Human & other);
+	virtual Human operator<<(std::ostream& os) const;
+	virtual void set_info();
 
 protected:
 	std::string name;
@@ -72,15 +60,16 @@ public:
 	Relative(const Relative & other);
 	Relative& operator=(const Translation & other);
 	Relative& operator=(const Relative & other);
-
+	Human operator<<(std::ostream&) const override;
 	void set_info() override;
-	friend std::ostream& operator<<(std::ostream&, const Relative&);
+	//friend std::ostream& operator<<(std::ostream&, const Relative&);
 
 private:
 	std::string how;
 	std::string surname;
 };
 
+std::ostream& operator<<(std::ostream&, const Human&);
 void save_data(const std::vector<std::vector<Relative>> &);
 void load_data(std::vector<std::vector<Relative>> &);
 void insert_or_erase_fam(std::vector<std::vector<Relative>> &, const int &index, const int &quantity, const options &do_what);

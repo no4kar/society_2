@@ -100,6 +100,7 @@ int main() {
 
 	} while (std::cin >> choice);
 
+	std::cout << "One is glad to be of service\n";
 	system("pause");
 	return 0;
 }

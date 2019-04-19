@@ -6,9 +6,33 @@
 //#include<fstream>
 #include"Society_2.h"
 
-Relative::Relative() {
-	how = "0";
-	surname = "0";
+Human::Human() :name("no_data"), sex("no_data"), age(0) {
+}
+
+Human::~Human() {
+}
+
+Human::Human(const Human & other) {
+	this->name = other.name;
+	this->sex = other.sex;
+	this->age = other.age;
+}
+
+void Human::set_info() {
+	std::cout << "\tName\t";
+	std::cin >> name;
+	std::cout << "\tSex\t";
+	std::cin >> sex;
+	std::cout << "\tAge\t";
+	std::cin >> age;
+}
+
+Human Human::operator<<(std::ostream& os) const {
+	os << sex + ", " + name + " has " + std::to_string(age) + " years;\n";
+	return *this;
+}
+
+Relative::Relative() :how("no_data"), surname("no_data") {
 }
 
 Relative::~Relative() {
@@ -45,7 +69,13 @@ void Relative::set_info() {
 	std::cin >> surname;
 }
 
-std::ostream& operator<<(std::ostream& os, const Relative& a) {
-	os << a.how + ", " + a.name + " " + a.surname + " has " + std::to_string(a.age) + " years;\n";
+Human Relative::operator<<(std::ostream& os) const {
+	os << how + ", " + name + " " + surname + " has " + std::to_string(age) + " years;\n";
+	return *this;
+}
+
+std::ostream& operator<<(std::ostream& os, const Human& obj) {
+	obj << os;
+	//os << a.how + ", " + a.name + " " + a.surname + " has " + std::to_string(a.age) + " years;\n";
 	return os;
 }
