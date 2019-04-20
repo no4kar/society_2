@@ -20,7 +20,7 @@ int main() {
 				std::cin >> family;
 				std::cout << "\tHow many relative will be in new family?\t";
 				std::cin >> relative;
-			} while (((check_lim(soc, INDEX(family), INDEX(1)) == 0) && (bool(std::cin) == 1)));
+			} while (!check_lim(soc, INDEX(family), INDEX(1)) && bool(std::cin));
 
 			if (!std::cin) {
 				std::cin.clear();
@@ -35,7 +35,7 @@ int main() {
 			do
 			{	std::cout << "\tWhat is the number of family?\t# ";
 				std::cin >> family;
-			} while (((check_lim(soc, INDEX(family), INDEX(1)) == 0) && (bool(std::cin) == 1)));
+			} while (!check_lim(soc, INDEX(family), INDEX(1)) && bool(std::cin));
 
 			std::cout << "\tHow many relatives do you want to add?\t";
 			std::cin >> relative;
@@ -56,7 +56,7 @@ int main() {
 				std::cout << "\tWhose data's do you want to change?(relative's number)\t# ";
 				std::cin >> relative;
 				
-			} while (((check_lim(soc, INDEX(family), INDEX(relative)) == 0) && (bool(std::cin) == 1)));
+			} while (!check_lim(soc, INDEX(family), INDEX(relative)) && bool(std::cin));
 			
 			if (!std::cin) {
 				std::cin.clear();
