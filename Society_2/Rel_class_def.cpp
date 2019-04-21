@@ -27,9 +27,8 @@ void Human::set_info() {
 	std::cin >> age;
 }
 
-Human Human::operator<<(std::ostream& os) const {
+void Human::operator<<(std::ostream& os) const {
 	os << sex + ", " + name + " has " + std::to_string(age) + " years;\n";
-	return *this;
 }
 
 Relative::Relative() :how("no_data"), surname("no_data") {
@@ -69,9 +68,8 @@ void Relative::set_info() {
 	std::cin >> surname;
 }
 
-Human Relative::operator<<(std::ostream& os) const {
+void Relative::operator<<(std::ostream& os) const {
 	os << how + ", " + name + " " + surname + " has " + std::to_string(age) + " years;\n";
-	return *this;
 }
 
 std::ostream& operator<<(std::ostream& os, const Human& obj) {

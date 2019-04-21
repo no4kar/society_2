@@ -29,7 +29,7 @@ public:
 	~Human(); //{}
 
 	Human(const Human & other);
-	virtual Human operator<<(std::ostream& os) const;
+	virtual void operator<<(std::ostream& os) const;
 	virtual void set_info();
 
 protected:
@@ -60,7 +60,7 @@ public:
 	Relative(const Relative & other);
 	Relative& operator=(const Translation & other);
 	Relative& operator=(const Relative & other);
-	Human operator<<(std::ostream&) const override;
+	void operator<<(std::ostream&) const override;
 	void set_info() override;
 	//friend std::ostream& operator<<(std::ostream&, const Relative&);
 
