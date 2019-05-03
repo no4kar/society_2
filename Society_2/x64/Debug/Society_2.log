@@ -1,9 +1,9 @@
-﻿  func_def.cpp
+﻿  func.cpp
   main.cpp
-  Rel_class_def.cpp
+  Rel_class.cpp
   save_load.cpp
-  Trans_class_def.cpp
+  Trans_class.cpp
   Создание кода...
   .NETFramework,Version=v4.6.1.AssemblyAttributes.cpp
-  func_def.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  func.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
   Society_2.vcxproj -> D:\2\my projects\Society_2\x64\Debug\Society_2.exe

@@ -24,22 +24,23 @@ enum options {
 };
 
 class Human {
-public:
-	Human();// : name("no_data"), sex("no_data"), age(0) {}
-	~Human(); //{}
-
-	Human(const Human & other);
-	virtual void operator<<(std::ostream& os) const;
-	virtual void set_info();
-
 protected:
 	std::string name;
 	std::string sex;
 	int age;
 
+public:
+	Human();// : name("no_data"), sex("no_data"), age(0) {}
+	Human(const Human & other);
+	virtual void operator<<(std::ostream& os) const;
+	virtual void set_info();
+	
+	virtual~Human(); //{}
 };
 
 class Relative :public Human {
+	std::string how;
+	std::string surname;
 public:
 	class Translation
 	{
@@ -56,17 +57,13 @@ public:
 	};
 
 	Relative();
-	~Relative();
 	Relative(const Relative & other);
 	Relative& operator=(const Translation & other);
 	Relative& operator=(const Relative & other);
 	void operator<<(std::ostream&) const override;
 	void set_info() override;
 	//friend std::ostream& operator<<(std::ostream&, const Relative&);
-
-private:
-	std::string how;
-	std::string surname;
+	~Relative()override;
 };
 
 std::ostream& operator<<(std::ostream&, const Human&);
