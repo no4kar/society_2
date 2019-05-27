@@ -8,15 +8,29 @@
 
 //#define DE1
 
+std::ostream& operator<<(std::ostream& os, const Human& obj) {
+	obj << os;
+	return os;
+}
+
+std::istream& operator>>(std::istream& is, Human& obj) {
+	obj >> is;
+	return is;
+}
+
+std::istream& bad_insert(std::istream& is) {
+	is.clear();
+	is.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	return is;
+}
+
 void get_soc_info(std::vector<std::vector<Relative>>& soc) {
 	size_t length = soc.size();
 
-	for (int f = 0; f < length; f++)
-	{
+	for (int f = 0; f < length; f++) {
 		std::cout << "\tFamily # " << f + 1 << ":" << std::endl;
 
-		for (int r = 0; r < soc[f].size(); r++)
-		{
+		for (int r = 0; r < soc[f].size(); r++) {
 			std::cout << "\t\t" << r + 1 << ") " << soc[f][r];
 		}
 	}

@@ -15,16 +15,15 @@ int main() {
 	{	switch (--choice)
 		{
 		case ADD_FAM:
-			do
-			{	std::cout << "\tDefinde the place where will be new family?\t";
+			do {
+				std::cout << "\tDefinde the place where will be new family?\t";
 				std::cin >> family;
 				std::cout << "\tHow many relative will be in new family?\t";
 				std::cin >> relative;
 			} while (!check_lim(soc, INDEX(family), INDEX(1)) && bool(std::cin));
 
 			if (!std::cin) {
-				std::cin.clear();
-				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+				bad_insert(std::cin);
 				break;
 			}
 
@@ -32,8 +31,8 @@ int main() {
 			break;
 
 		case ADD_REL:
-			do
-			{	std::cout << "\tWhat is the number of family?\t# ";
+			do {
+				std::cout << "\tWhat is the number of family?\t# ";
 				std::cin >> family;
 			} while (!check_lim(soc, INDEX(family), INDEX(1)) && bool(std::cin));
 
@@ -41,8 +40,7 @@ int main() {
 			std::cin >> relative;
 
 			if (!std::cin) {
-				std::cin.clear();
-				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+				bad_insert(std::cin);
 				break;
 			}
 
@@ -50,21 +48,20 @@ int main() {
 			break;
 
 		case SET_REL:
-			do
-			{	std::cout << "\tWhat is the number of family?\t# ";
+			do {
+				std::cout << "\tWhat is the number of family?\t# ";
 				std::cin >> family;
 				std::cout << "\tWhose data's do you want to change?(relative's number)\t# ";
-				std::cin >> relative;
-				
+				std::cin >> relative;				
 			} while (!check_lim(soc, INDEX(family), INDEX(relative)) && bool(std::cin));
 			
 			if (!std::cin) {
-				std::cin.clear();
-				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+				bad_insert(std::cin);
 				break;
 			}
 
-			soc[INDEX(family)][INDEX(relative)].set_info();
+			//soc[INDEX(family)][INDEX(relative)].set_info();
+			std::cin >> soc[INDEX(family)][INDEX(relative)];
 			break;
 
 		case SAVE_DATA:
@@ -96,7 +93,7 @@ int main() {
 			break;
 		}
 		std::cout << "\n1.Creat a new society\n2.Add family;\n3.Add relatives;\n4.Set relative;\n"
-			<< "5.Get info about all familys;\n6.Save data;\n7.Load data;\t(enter '*' for ending)\n\t# ";
+			<< "5.Get info about all familys;\n6.Save data;\n7.Load data;\t(enter '*' for end)\n\t# ";
 
 	} while (std::cin >> choice);
 

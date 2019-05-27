@@ -30,10 +30,10 @@ protected:
 	int age;
 
 public:
-	Human();// : name("no_data"), sex("no_data"), age(0) {}
-	Human(const Human & other);
-	virtual void operator<<(std::ostream& os) const;
-	virtual void set_info();
+	Human();
+	Human(const Human&);
+	virtual void operator<<(std::ostream&) const;
+	virtual void operator>>(std::istream&);
 	
 	virtual~Human(); //{}
 };
@@ -47,7 +47,7 @@ public:
 	public:
 		Translation();
 		~Translation();
-		Translation& operator=(const Relative& other);
+		Translation& operator=(const Relative&);
 		//protected:
 		char name[30];
 		char sex[10];
@@ -57,16 +57,17 @@ public:
 	};
 
 	Relative();
-	Relative(const Relative & other);
-	Relative& operator=(const Translation & other);
-	Relative& operator=(const Relative & other);
+	Relative(const Relative&);
+	Relative& operator=(const Translation&);
+	Relative& operator=(const Relative&);
 	void operator<<(std::ostream&) const override;
-	void set_info() override;
-	//friend std::ostream& operator<<(std::ostream&, const Relative&);
-	~Relative()override;
+	void operator>>(std::istream&)override;
+	~Relative();
 };
 
 std::ostream& operator<<(std::ostream&, const Human&);
+std::istream& operator>>(std::istream&, Human&);
+std::istream& bad_insert(std::istream&);
 void save_data(const std::vector<std::vector<Relative>> &);
 void load_data(std::vector<std::vector<Relative>> &);
 void insert_or_erase_fam(std::vector<std::vector<Relative>> &, const int &index, const int &quantity, const options &do_what);

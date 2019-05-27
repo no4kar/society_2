@@ -128,8 +128,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="func.cpp" />
+    <ClCompile Include="Human_class.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="RelAndHuman_class.cpp" />
+    <ClCompile Include="Relative_class.cpp" />
     <ClCompile Include="save_load.cpp" />
     <ClCompile Include="Trans_class.cpp" />
   </ItemGroup>

@@ -32,7 +32,10 @@
     <ClCompile Include="func.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="RelAndHuman_class.cpp">
+    <ClCompile Include="Human_class.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Relative_class.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

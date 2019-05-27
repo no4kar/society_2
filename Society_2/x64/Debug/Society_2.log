@@ -1,6 +1,7 @@
 ﻿  func.cpp
+  Human_class.cpp
   main.cpp
-  Rel_class.cpp
+  Relative_class.cpp
   save_load.cpp
   Trans_class.cpp
   Создание кода...
