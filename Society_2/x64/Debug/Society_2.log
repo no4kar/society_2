@@ -1,10 +1,5 @@
-﻿  func.cpp
-  Human_class.cpp
-  main.cpp
-  Relative_class.cpp
-  save_load.cpp
-  Trans_class.cpp
+﻿  Relative_class.cpp
+  func.cpp
   Создание кода...
-  .NETFramework,Version=v4.6.1.AssemblyAttributes.cpp
   func.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
   Society_2.vcxproj -> D:\2\my projects\Society_2\x64\Debug\Society_2.exe

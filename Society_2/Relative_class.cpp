@@ -39,7 +39,8 @@ void Relative::operator<<(std::ostream& os) const {
 }
 
 void Relative::operator>>(std::istream& is) {
-	((Human&)*this) >> is;
+	//(Human&)*this >> is;
+	::Human::operator>>(is);
 	std::cout << "\tHow in family\t";
 	is >> how;
 	std::cout << "\tSurname\t";
